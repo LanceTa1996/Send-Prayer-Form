@@ -25,7 +25,7 @@ function removeElement(elementId) {
 		var heading  = document.createElement("p");
 		heading.name = "para";
 		document.body.appendChild(heading);
-		var text = document.createTextNode("Please type who you are praying for and your prayer for them.");
+		var text = document.createTextNode("Please type you're name, who you are praying for and your prayer for them.");
 		heading.appendChild(text);
 	
 		var my_form=document.createElement('form');
@@ -33,25 +33,44 @@ function removeElement(elementId) {
 		my_form.action= "https://script.google.com/macros/s/AKfycbxkVLbMWGPQtaUruJWmbdnCstk9yy7rJe-LKMhl4AZEz0SSQWr_/exec";
 		my_form.method = "get";
 
-		var text = document.createTextNode("Firstname:");
+		var text = document.createTextNode("Your Firstname:");
 		my_form.appendChild(text);
 
 		var firstname = document.createElement("input");
 		firstname.type = "text";
-		firstname.name = "Firstname";
+		firstname.name = "YourFirstname";
 		my_form.appendChild(firstname);
 
-		var text = document.createTextNode(" Lastname:");
+		var text = document.createTextNode(" Your Lastname:");
 		my_form.appendChild(text);
 
 		var lastname = document.createElement("input");
 		lastname.type = "text";
-		lastname.name = "Lastname";
+		lastname.name = "YourLastname";
 		my_form.appendChild(lastname);
 
-		var space = document.createElement("br");
+		var space = document.createElement("hr");
 		my_form.appendChild(space);
 
+		var text = document.createTextNode("Person's Firstname:");
+		my_form.appendChild(text);
+
+		var firstname = document.createElement("input");
+		firstname.type = "text";
+		firstname.name = "PersonFirstname";
+		my_form.appendChild(firstname);
+
+		var text = document.createTextNode(" Person's Lastname:");
+		my_form.appendChild(text);
+
+		var lastname = document.createElement("input");
+		lastname.type = "text";
+		lastname.name = "PersonLastname";
+		my_form.appendChild(lastname);
+
+		var space = document.createElement("hr");
+		my_form.appendChild(space);
+		
 		var space = document.createElement("br");
 		my_form.appendChild(space);
 
